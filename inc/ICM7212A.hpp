@@ -1,8 +1,8 @@
-/**
- * ICM7212A.hpp - Header file for the ICM7212A driver.
+/*! \brief ICM7212A Driver
+ *  Header file for the Maxim Integrated ICM7212A driver.
  *
- * @author Brian Reece
- * @date 09/15/2021
+ *  \author Brian Reece
+ *  \date 09/15/2021
  */
 
 #ifndef ICM7212A_H
@@ -14,32 +14,47 @@
 
 namespace icm7212
 {
+  //! Code-B Decoding Enum
   enum ICM7212ACodeB
   {
-    ZERO = 0,
-    ONE = 1,
-    TWO = 2,
-    THREE = 3,
-    FOUR = 4,
-    FIVE = 5,
-    SIX = 6,
-    SEVEN = 7,
-    EIGHT = 8,
-    NINE = 9,
-    HYPHEN = 10,
-    E = 11,
-    H = 12,
-    L = 13,
-    P = 14,
-    BLANK = 15
+    ZERO = 0,    //!< 0
+    ONE = 1,     //!< 1
+    TWO = 2,     //!< 2
+    THREE = 3,   //!< 3
+    FOUR = 4,    //!< 4
+    FIVE = 5,    //!< 5
+    SIX = 6,     //!< 6
+    SEVEN = 7,   //!< 7
+    EIGHT = 8,   //!< 8
+    NINE = 9,    //!< 9
+    HYPHEN = 10, //!< -
+    E = 11,      //!< E
+    H = 12,      //!< H
+    L = 13,      //!< L
+    P = 14,      //!< P
+    BLANK = 15   //!< ' '
   };
 
+  //! \brief Class definition for the ICM7212A driver
   class ICM7212A
   {
     public:
-      ICM7212A(volatile uint8_t *, enum ICM7212BitOrder);
+      /*! \brief Constructor
+       *  \param port The port to use (i.e. PORTA, PORTB, etc.)
+       *  \param bit_order The pin-to-pin connection between AVR and ICM7212A
+       */
+      ICM7212A(volatile uint8_t *port, enum ICM7212BitOrder bit_order);
+      
+      //! \brief Destructor
       ~ICM7212A();
-      int8_t write(const char *);
+
+      /*! \brief Write value to display
+       *  \param value The value to write. Must be (0..9,-,E,H,L,P,' ')
+       *  \return 0 if successful, -1 on failure
+       */
+      int8_t write(const char *value);
+      
+      //! \brief Clear display
       void clear();
 
     private:

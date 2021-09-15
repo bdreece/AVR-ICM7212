@@ -1,8 +1,8 @@
-/**
- * ICM7212AM.hpp - Header file for the ICM7212AM driver.
+/*! \brief ICM7212AM Driver
+ *  Header file for the Maxim Integrated ICM7212AM driver.
  *
- * @author Brian Reece
- * @date 09/15/2021
+ *  \author Brian Reece
+ *  \date 09/15/2021
  */
 
 #ifndef ICM7212AM_H
@@ -18,12 +18,26 @@
 
 namespace icm7212
 {
+  //! Class definition for the ICM7212AM driver
   class ICM7212AM
   {
     public:
-      ICM7212AM(volatile uint8_t *, enum ICM7212BitOrder);
+      /*! \brief Constructor
+       *  \param port The port to use (i.e. PORTA, PORTB, etc.)
+       *  \param bit_order The pin-to-pin connection between AVR and ICM7212AM
+       */
+      ICM7212AM(volatile uint8_t *port, enum ICM7212BitOrder bit_order);
+      
+      //! Destructor
       ~ICM7212AM();
-      int8_t write(const char *);
+
+      /*! \brief Write value to display
+       *  \param value The value to write. Must be (0..9,-,E,H,L,P,' ')
+       *  \return 0 if successful, -1 on error
+       */
+      int8_t write(const char *value);
+
+      //! \brief Clear the display
       void clear();
 
     private:
