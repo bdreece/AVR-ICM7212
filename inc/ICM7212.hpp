@@ -22,11 +22,11 @@ namespace icm7212
   class ICM7212
   {
     public:
-      ICM7212(uint8_t *port, enum ICM7212BitOrder bit_order);
+      ICM7212(volatile uint8_t *port, enum ICM7212BitOrder bit_order);
       ~ICM7212();
       void write(uint16_t value);
     private:
-      uint8_t *port;
+      volatile uint8_t *port;
       uint8_t DATA_INPUT;
       uint8_t DIGIT_SEL;
   };

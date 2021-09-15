@@ -37,13 +37,13 @@ namespace icm7212
   class ICM7212A
   {
     public:
-      ICM7212A(uint8_t *, enum ICM7212BitOrder);
+      ICM7212A(volatile uint8_t *, enum ICM7212BitOrder);
       ~ICM7212A();
-      int8_t write(char [4]);
+      int8_t write(const char *);
       void clear();
 
     private:
-      uint8_t *port;
+      volatile uint8_t *port;
       uint8_t DATA_INPUT;
       uint8_t DIGIT_SEL;
       void display(enum ICM7212ACodeB [4]);

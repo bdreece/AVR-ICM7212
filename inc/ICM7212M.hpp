@@ -17,12 +17,12 @@ namespace icm7212
   class ICM7212M
   {
     public:
-      ICM7212M(uint8_t *, enum ICM7212BitOrder);
+      ICM7212M(volatile uint8_t *, enum ICM7212BitOrder);
       ~ICM7212M();
       void write(uint16_t);
 
     private:
-      uint8_t *port;
+      volatile uint8_t *port;
       uint8_t DATA_INPUT;
       uint8_t DIGIT_SEL;
       uint8_t CHIP_SEL;

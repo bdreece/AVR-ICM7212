@@ -15,7 +15,7 @@
 
 using namespace icm7212;
 
-ICM7212A::ICM7212A(uint8_t *port, enum ICM7212BitOrder bit_order)
+ICM7212A::ICM7212A(volatile uint8_t *port, enum ICM7212BitOrder bit_order)
 {
   this->port = port;
   DATA_INPUT = bit_order ? 4 : 0;
@@ -27,7 +27,7 @@ ICM7212A::~ICM7212A()
   port = NULL;
 }
 
-int8_t ICM7212A::write(char value[4])
+int8_t ICM7212A::write(const char *value)
 {
   uint8_t i;
   enum ICM7212ACodeB digits[4];
@@ -58,7 +58,7 @@ void ICM7212A::clear()
   display(digits);
 }
 
-void ICM7212A::display(enum ICM7212ACodeB digits[4])
+void ICM7212A::display(enum ICM7212ACodeB *digits)
 {
   uint8_t i;
 

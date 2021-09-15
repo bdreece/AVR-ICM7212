@@ -13,5 +13,9 @@
 
 int main()
 {
+  icm7212::ICM7212AM display(&PORTB, icm7212::DATA_HIGH);
+
+  display.write("0000");
+
   return 0;
 }

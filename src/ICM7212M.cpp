@@ -14,7 +14,7 @@
 
 using namespace icm7212;
 
-ICM7212M::ICM7212M(uint8_t *port, enum ICM7212BitOrder bit_order)
+ICM7212M::ICM7212M(volatile uint8_t *port, enum ICM7212BitOrder bit_order)
 {
   this->port = port;
   DATA_INPUT = bit_order ? 4 : 2;
