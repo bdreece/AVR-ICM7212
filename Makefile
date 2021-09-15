@@ -1,7 +1,9 @@
+MMCU 		:= atmega328p
+
 CC			:= avr-g++
 FLAGS		:= -Wall -Werror -g -Os
 CFLAGS	:= -I./inc
-MFLAGS	:= -mmcu=atmega328p
+MFLAGS	:= -mmcu=$(MMCU)
 LFLAGS	:= -L./lib -lICM7212
 
 AR			:= avr-ar rcs
