@@ -19,7 +19,7 @@ namespace icm7212
     DIGIT_HIGH = 1 //!< In given port, data bits occupy [0:3], digit bits occupy [4:7].
   };
 
-  //! Class definition for the ICM7217 driver
+  //! Class definition for the ICM7212 driver
   class ICM7212
   {
     public:
