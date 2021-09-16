@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['icm7212_0',['ICM7212',['../index.html',1,'']]]
+  ['avr_2dicm7212_0',['AVR-ICM7212',['../index.html',1,'']]]
 ];

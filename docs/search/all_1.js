@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clear_0',['clear',['../classicm7212_1_1ICM7212A.html#a39bc6ff3b39f398a7ca37ed9bcc319b3',1,'icm7212::ICM7212A::clear()'],['../classicm7212_1_1ICM7212AM.html#a78e5472d4d7671ef1cd777be214bbd5a',1,'icm7212::ICM7212AM::clear()']]]
+  ['blank_0',['BLANK',['../namespaceicm7212.html#a972a4ff1a7fc22dedb23ac69af63cf65aad013404c3c9f51ae96c85794f91f331',1,'icm7212']]]
 ];

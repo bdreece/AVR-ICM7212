@@ -1,4 +1,4 @@
-# ICM7212
+# AVR-ICM7212
 
 A simple AVR library for the Maxim Integrated ICM7212 family of 7-segment LED drivers
 
