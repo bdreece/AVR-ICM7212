@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bdreece/AVR-ICM7212: Main Page</title>
+<title>bdreece/AVR-ICM7212: ICM7212</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,10 +62,43 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">bdreece/AVR-ICM7212 Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">ICM7212 </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_README"></a> A simple AVR library for the Maxim Integrated ICM7212 family of 7-segment LED drivers</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Table of Contents</h1>
+<ul>
+<li><a href="#build-dependencies">Build Dependencies</a></li>
+<li><a href="#building">Building</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md3"></a>
+Build Dependencies</h2>
+<p >In order to build this library, the following must be installed on your system:</p>
+<ul>
+<li>make</li>
+<li>avr-g++</li>
+<li>avr-binutils</li>
+<li>avr-libc</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Building</h2>
+<p >The library can be build by modifying the MMCU line of the Makefile to match your uC. Then, enter the following command in your terminal:</p>
+<p ><code>make</code></p>
+<p >You will find that lib/libICM7212.a has been created, and can be linked against your AVR applications!</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Demo</h2>
+<p >The source for this library also ships with a demo application for the ATMega32u4. The demo can be built with the following command:</p>
+<p ><code>make all</code></p>
+<p >You will find that bin/ICM7212AM_demo.hex has been created (this is the model I own). The demo can be flashed to the ATMega32u4 using avrdude.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Credits</h2>
+<p >Everything was written by me (except avrlibc of course), and is licensed with the GPL-2 license. Note that, in accordance with the aforementioned license, I assume NO LIABILITY and there is NO WARRANTY associated with the included software. Use at your own risk. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
