@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf out/
+mkdir -p out/
+
+if [ $1 == "debug" ]
+then
+  cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=generic-gcc-avr.cmake -DAVR_MCU=atmega328p -B out -G Ninja .
+else
+  cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=generic-gcc-avr.cmake -DAVR_MCU=atmega328p -B out -G Ninja .
+fi
