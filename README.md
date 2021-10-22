@@ -37,4 +37,4 @@ You will find that bin/ICM7212AM_demo.hex has been created (this is the model I 
 
 ### Credits
 
-Everything was written by me (except avrlibc of course), and is licensed with the GPL-2 license. Note that, in accordance with the aforementioned license, I assume NO LIABILITY and there is NO WARRANTY associated with the included software. Use at your own risk.
+Everything was written by me (except avrlibc and the CMake toolchain of course), and is licensed with the GPL-2 license. Note that, in accordance with the aforementioned license, I assume NO LIABILITY and there is NO WARRANTY associated with the included software. Use at your own risk.
